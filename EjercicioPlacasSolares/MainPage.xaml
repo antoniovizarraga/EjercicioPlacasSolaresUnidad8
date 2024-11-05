@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjercicioPlacasSolares.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image Source="placa.png" Scale="0.3"></Image>
+            <Label Text="Usuario"></Label>
+            <Entry></Entry>
+            <Label Text="Contraseña"></Label>
+            <Entry></Entry>
+            <Button Text="Iniciar sesión" Clicked="Button_Clicked"></Button>
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

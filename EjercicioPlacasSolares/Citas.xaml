@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjercicioPlacasSolares.Citas"
+             Title="Citas">
+    <StackLayout Padding="10">
+        <Label Text="Citas para hoy"
+               FontSize="24"
+               HorizontalOptions="Center"
+               Margin="0,20" />
+
+        <ListView x:Name="CitasListView"
+                  ItemSelected="OnItemSelected"
+                  HasUnevenRows="True"
+                  SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" Orientation="Horizontal" Spacing="15">
+                            <Label Text="{Binding Nombre}"
+                                   FontSize="18"
+                                   HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding FechaHora, StringFormat='{0:HH:mm}'}"
+                                   HorizontalOptions="End" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

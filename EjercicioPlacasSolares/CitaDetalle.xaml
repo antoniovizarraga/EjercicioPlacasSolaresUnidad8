@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjercicioPlacasSolares.CitaDetalle"
+             Title="Detalles de la cita">
+    <ScrollView Padding="20">
+        <StackLayout>
+            
+            <Label Text="{Binding Nombre}"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="{Binding FechaHora, StringFormat='{0:dddd, dd MMMM yyyy, HH:mm}'}"
+                   FontSize="18"
+                   HorizontalOptions="Center" />
+
+            <StackLayout>
+                <Label Text="Dirección:"
+                       FontAttributes="Bold" />
+                <Label Text="{Binding Direccion}" />
+
+                <Label Text="Teléfono:"
+                       FontAttributes="Bold" />
+                <Label Text="{Binding Telefono}" />
+
+                <VerticalStackLayout Padding="10" Spacing="20" VerticalOptions="CenterAndExpand">
+                    <Label Text="Observaciones" FontAttributes="Bold" />
+                    <Editor Placeholder="Escriba sus observaciones aquí." HeightRequest="100" />
+
+                    <Button Text="Agregar imágenes" ImageSource="plus.png" ContentLayout="Left, 10" />
+
+                    <HorizontalStackLayout>
+                        <CheckBox />
+                        <Label Text="¿Es esta casa apta para la instalación?"></Label>
+                    </HorizontalStackLayout>
+
+                    <Button Text="Enviar informe" Clicked="Button_Clicked" />
+
+                </VerticalStackLayout>
+                
+                
+
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
